@@ -89,3 +89,15 @@ p{
   background-size: cover;
   background-position: center;
 }
+.overly::before {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: #1d293e;
+	opacity: .6;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	right: 0;
+}

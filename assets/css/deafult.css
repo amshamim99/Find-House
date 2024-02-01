@@ -365,6 +365,9 @@
 .pt-200{
 	padding-top:200px;
 }
+.pt-380{
+	padding-top:380px;
+}
 
 /*padding-bottom*/
 
@@ -487,6 +490,9 @@
 }
 .pb-200{
 	padding-bottom: 200px;
+}
+.pb-380{
+	padding-bottom: 380px;
 }
 
 /*padding-left*/

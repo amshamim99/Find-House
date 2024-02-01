@@ -1,0 +1,112 @@
+.banner-wrapper{
+    .banner-content{
+        .title{
+            font-size: 55px;
+            color: #fff;
+            line-height: 1;
+        }
+        p{
+            font-size: 18px;
+            color: #fff;
+            font-size: 700;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    } 
+    .banner-form{
+        background: #fff;
+        padding: 30px 20px;
+        border-radius: 8px;
+        position: relative;
+        z-index: 9;
+        margin-top: 30px;
+        &::before {
+            position: absolute;
+            content: '';
+            background: #ffffff26;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            z-index: -1;
+            border-radius: 8px;
+        }
+        ul{
+            li{
+                display: inline-block;
+                margin-right: 10px;
+                position: relative;
+                &:last-child{
+                    margin-right: 0;
+                }
+                input{
+                    width: 200px;
+                    height: 50px;
+                    background: #fff;
+                    border: 1px solid #ebebeb;
+                    outline: none;
+                    border-radius: 8px;
+                    color: #484848;
+                    padding: 8px 12px;
+                    font-size: 14px;
+                }
+                label{
+                    position: absolute;
+                    right: 15px;
+                    top: 14px;
+                    font-size: 18px;
+                }
+                select{
+                    width: 170px;
+                    height: 50px;
+                    background: #fff;
+                    border: 1px solid #ebebeb;
+                    border-radius: 8px;
+                    color: #484848;
+                    padding: 8px 12px;
+                    font-size: 14px;
+                }
+                button{
+                    width: 170px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 8px;
+                    background: var(--theme);
+                    border: 2px solid transparent;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    box-shadow: 0px 1px 4px #ff5a5f4d;
+                    transition: .3s;
+                    &:hover{
+                        background: transparent;
+                        border-color: 2px solid var(--theme);
+                        color: var(--theme);
+                    }
+                }
+                .mega-dropdown{
+                    .dropdown-btn{
+                        cursor: pointer;
+                        i{
+                            padding-left: 10px;
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+  
+  
+  
+ 
+ 
+
+
+
+  

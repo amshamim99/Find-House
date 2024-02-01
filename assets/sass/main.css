@@ -121,11 +121,25 @@ p {
   background-position: center;
 }
 
+.overly::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #1d293e;
+  opacity: 0.6;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+
 .header-transparant {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 11;
 }
 
 .main-header .container-fluid {
@@ -284,4 +298,96 @@ p {
 }
 .main-header .main-menu ul > li .header-button a.header-btn i {
   margin-right: 5px;
+}
+
+.banner-wrapper .banner-content .title {
+  font-size: 55px;
+  color: #fff;
+  line-height: 1;
+}
+.banner-wrapper .banner-content p {
+  font-size: 18px;
+  color: #fff;
+  font-size: 700;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.banner-wrapper .banner-form {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 9;
+  margin-top: 30px;
+}
+.banner-wrapper .banner-form::before {
+  position: absolute;
+  content: "";
+  background: rgba(255, 255, 255, 0.1490196078);
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  border-radius: 8px;
+}
+.banner-wrapper .banner-form ul li {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+.banner-wrapper .banner-form ul li:last-child {
+  margin-right: 0;
+}
+.banner-wrapper .banner-form ul li input {
+  width: 200px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  outline: none;
+  border-radius: 8px;
+  color: #484848;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.banner-wrapper .banner-form ul li label {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  font-size: 18px;
+}
+.banner-wrapper .banner-form ul li select {
+  width: 170px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  color: #484848;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.banner-wrapper .banner-form ul li button {
+  width: 170px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: var(--theme);
+  border: 2px solid transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0px 1px 4px rgba(255, 90, 95, 0.3019607843);
+  transition: 0.3s;
+}
+.banner-wrapper .banner-form ul li button:hover {
+  background: transparent;
+  border-color: 2px solid var(--theme);
+  color: var(--theme);
+}
+.banner-wrapper .banner-form ul li .mega-dropdown .dropdown-btn {
+  cursor: pointer;
+}
+.banner-wrapper .banner-form ul li .mega-dropdown .dropdown-btn i {
+  padding-left: 10px;
 }/*# sourceMappingURL=main.css.map */
