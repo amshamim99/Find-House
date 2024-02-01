@@ -1,0 +1,124 @@
+.header-transparant {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.main-header{
+    .container-fluid{
+        padding: 0 30px;
+    }
+    .main-logo{
+        span {
+            font-size: 22px;
+            color: #fff;
+            font-weight: 700;
+            padding-left: 15px;
+            text-transform: capitalize;
+        }
+    } 
+    .main-menu{
+        ul{
+            > li{
+                display: inline-block;
+                padding-left: 25px;
+                position: relative;
+                &.active a{
+                    color: var(--theme);
+                }
+                &:hover .dowp-down{
+                    transform: scaleY(1);
+                    visibility: visible;
+                }
+                .dowp-down{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    transform: scaleY(0);
+                    visibility: hidden;
+                    transition: .3s;
+                    .sub-menu {
+                        width: 280px;
+                        background: #fff;
+                        position: relative;
+                        text-align: left;
+                        padding: 25px;
+                        border-radius: 6px;
+                        transition: .3s;
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            top: -15px;
+                            left: 10%;
+                            width: 0px;
+                            height: 0px;
+                            border-style: solid;
+                            border-width: 0 14.5px 15px 14.5px;
+                            border-color: transparent transparent #fff transparent;
+                            transform: rotate(0deg);
+                             
+                        }
+                        li{
+                            display: block;
+                            margin: 0;
+                            padding-left: 0;
+                            margin-bottom: 10px;
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid var(--border);
+                            transition: .3s;
+                             &.active a{
+                                color: var(--theme);
+                            }
+                            &:hover a{
+                                color: var(--theme);
+                                padding-left: 10px;
+                            }
+                             a{
+                                color: var(--pra);
+                                padding: 0;
+                                display: block;
+                                font-size: 16px;
+                                font-weight: 400;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                }
+                > a{
+                    color: #fff;
+                    display: inline-block;
+                    padding: 38px 0;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 500;
+                    i{
+                        margin-left: 8px;
+                    }
+                    span i{
+                        margin-right:8px;
+                        margin-left: 0;
+                    }
+                }
+                .header-button{
+                    a{
+                        text-decoration: none;
+                        color: var(--theme);
+                        &.header-btn{
+                            @include buttons;
+                            background: #fff;
+                            border: 2px solid transparent;
+                            transition: .3s;
+                            &:hover{
+                                border-color: var(--theme);
+                            }
+                            i{
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
