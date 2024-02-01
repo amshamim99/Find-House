@@ -41,6 +41,10 @@ img {
   overflow: hidden;
 }
 
+.static {
+  position: static;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -127,6 +131,10 @@ p {
 .main-header .container-fluid {
   padding: 0 30px;
 }
+.main-header .main-logo a {
+  display: inline-block;
+  text-decoration: none;
+}
 .main-header .main-logo span {
   font-size: 22px;
   color: #fff;
@@ -150,12 +158,21 @@ p {
   position: absolute;
   top: 100%;
   left: 0;
+  width: 280px;
+  height: 0;
   transform: scaleY(0);
   visibility: hidden;
   transition: 0.3s;
 }
+.main-header .main-menu ul > li .dowp-down.dowp-right {
+  right: 0;
+  left: auto;
+}
+.main-header .main-menu ul > li .dowp-down.dowp-right .sub-menu::before {
+  right: 10%;
+  left: auto;
+}
 .main-header .main-menu ul > li .dowp-down .sub-menu {
-  width: 280px;
   background: #fff;
   position: relative;
   text-align: left;
@@ -175,6 +192,21 @@ p {
   border-color: transparent transparent #fff transparent;
   transform: rotate(0deg);
 }
+.main-header .main-menu ul > li .dowp-down .sub-menu.after-arow li:hover a::after {
+  color: var(--theme);
+}
+.main-header .main-menu ul > li .dowp-down .sub-menu.after-arow li a {
+  position: relative;
+}
+.main-header .main-menu ul > li .dowp-down .sub-menu.after-arow li a::after {
+  position: absolute;
+  content: "\f105";
+  font-family: fontawesome;
+  top: 0;
+  right: 0;
+  color: var(--pra);
+  font-size: 10px;
+}
 .main-header .main-menu ul > li .dowp-down .sub-menu li {
   display: block;
   margin: 0;
@@ -184,10 +216,31 @@ p {
   border-bottom: 1px solid var(--border);
   transition: 0.3s;
 }
+.main-header .main-menu ul > li .dowp-down .sub-menu li:hover .dowp-down {
+  transform: scaleY(1);
+  visibility: visible;
+}
+.main-header .main-menu ul > li .dowp-down .sub-menu li .dowp-down {
+  left: 100%;
+  top: 0;
+  transform: scaleY(0);
+  visibility: hidden;
+}
+.main-header .main-menu ul > li .dowp-down .sub-menu li .dowp-down .sub-menu::before {
+  display: none;
+}
+.main-header .main-menu ul > li .dowp-down .sub-menu li .dowp-down .sub-menu li a::after {
+  display: none;
+}
+.main-header .main-menu ul > li .dowp-down .sub-menu li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
 .main-header .main-menu ul > li .dowp-down .sub-menu li.active a {
   color: var(--theme);
 }
-.main-header .main-menu ul > li .dowp-down .sub-menu li:hover a {
+.main-header .main-menu ul > li .dowp-down .sub-menu li:hover > a {
   color: var(--theme);
   padding-left: 10px;
 }
